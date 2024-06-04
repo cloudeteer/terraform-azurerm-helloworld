@@ -1,2 +1,3 @@
-# terraform-module-template
-Terraform Module Template
+# terraform-azurerm-helloworld
+
+Terraform "Hello World!" Module
