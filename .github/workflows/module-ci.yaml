@@ -3,3 +3,5 @@ on: [push, pull_request]
 jobs:
   module-ci:
     uses: cloudeteer/terraform-governance/.github/workflows/module-ci.yaml@349-epic-the-revival-of-tf-mod-lib
+    permissions:
+      contents: write
