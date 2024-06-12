@@ -1,5 +1,15 @@
 name: module-ci
-on: [push, pull_request]
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    types:
+      - opened
+      - edited
+      - synchronize
+      - labeled
+      - unlabeled
 jobs:
   module-ci:
     uses: cloudeteer/terraform-governance/.github/workflows/module-ci.yaml@349-epic-the-revival-of-tf-mod-lib
