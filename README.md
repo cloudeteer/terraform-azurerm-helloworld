@@ -13,7 +13,9 @@ module "helloworld" {
 
 ## Providers
 
-No providers.
+| Name | Version |
+|------|---------|
+| azurerm | ~> 3.0 |
 
 ## Modules
 
@@ -21,7 +23,9 @@ No modules.
 
 ## Resources
 
-No resources.
+| Name | Type |
+|------|------|
+| [azurerm_client_config.current](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/data-sources/client_config) | data source |
 
 ## Inputs
 
@@ -31,5 +35,6 @@ No inputs.
 
 | Name | Description |
 |------|-------------|
+| client\_id | n/a |
 | hello\_world | n/a |
 <!-- END_TF_DOCS -->
