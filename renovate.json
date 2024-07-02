@@ -1,6 +1,6 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "extends": [
-    "local>cloudeteer/terraform-governance:renovate-default.json"
+    "github>cloudeteer/terraform-governance:renovate-default.json"
   ]
 }
