@@ -10,3 +10,12 @@ This directory contains tests for all Terraform examples in `../examples`. Use t
 terraform init -test-directory=tests/examples
 terraform test -test-directory=tests/examples
 ```
+
+## `./local`
+
+This directory is for tests intended to run locally during development. Use the following commands to initialize and run the tests:
+
+```shell
+terraform init -test-directory=tests/local
+terraform test -test-directory=tests/local
+```
