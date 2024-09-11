@@ -18,7 +18,7 @@ Terraform "Hello World!" Module
 This example demonstrates the usage of this Terraform module with default settings.
 
 ```hcl
-module "helloworld" {
+module "example" {
   source = "cloudeteer/helloworld/azurerm"
 }
 ```
