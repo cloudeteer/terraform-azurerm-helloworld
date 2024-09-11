@@ -19,3 +19,12 @@ This directory is for tests intended to run locally during development. Use the 
 terraform init -test-directory=tests/local
 terraform test -test-directory=tests/local
 ```
+
+## `./remote`
+
+This directory contains tests designed to be executed by CI/CD pipelines. Use the following commands to initialize and run the tests:
+
+```shell
+terraform init -test-directory=tests/remote
+terraform test -test-directory=tests/remote
+```
