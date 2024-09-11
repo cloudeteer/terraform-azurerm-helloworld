@@ -12,7 +12,7 @@ on:
       - unlabeled
 jobs:
   module-ci:
-    uses: cloudeteer/terraform-governance/.github/workflows/module-ci.yaml@349-epic-the-revival-of-tf-mod-lib
+    uses: cloudeteer/terraform-governance/.github/workflows/module-ci.yaml@main
     permissions:
       contents: write
       pull-requests: read
