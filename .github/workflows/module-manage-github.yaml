@@ -1,0 +1,12 @@
+name: module-manage-github
+on:
+  issues:
+    types:
+      - opened
+  pull_request:
+    types:
+      - opened
+
+jobs:
+  module-manage-github:
+    uses: cloudeteer/terraform-governance/.github/workflows/module-github-project.yaml@main
