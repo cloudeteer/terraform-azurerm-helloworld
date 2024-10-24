@@ -5,12 +5,11 @@
 
 ---
 
-# terraform-azurerm-helloworld
+# terraform-module-template
 
-[![SemVer](https://img.shields.io/badge/SemVer-2.0.0-blue.svg)](CHANGELOG.md)
-[![Keep a Changelog](https://img.shields.io/badge/changelog-Keep%20a%20Changelog%20v1.0.0-%23E05735)](CHANGELOG.md)
+[![SemVer](https://img.shields.io/badge/SemVer-2.0.0-blue.svg)](https://github.com/cloudeteer/terraform-module-template/releases)
 
-Terraform "Hello World!" Module
+Terraform Module Template
 
 <!-- BEGIN_TF_DOCS -->
 ## Usage
@@ -27,7 +26,7 @@ module "example" {
 
 The following providers are used by this module:
 
-- <a name="provider_azurerm"></a> [azurerm](#provider\_azurerm) (~> 4.0)
+- <a name="provider_azurerm"></a> [azurerm](#provider\_azurerm) (>= 4.1)
 
 
 
@@ -42,10 +41,6 @@ The following resources are used by this module:
 ## Outputs
 
 The following outputs are exported:
-
-### <a name="output_client_id"></a> [client\_id](#output\_client\_id)
-
-Description: n/a
 
 ### <a name="output_hello_world"></a> [hello\_world](#output\_hello\_world)
 

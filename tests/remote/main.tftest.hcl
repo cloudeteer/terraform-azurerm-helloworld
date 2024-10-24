@@ -1,12 +1,12 @@
-provider "azurerm" {
-  features {}
-}
-
-run "client_id_should_be_uuid" {
+run "should_apply_without_error" {
   command = apply
 
+  module {
+    source = "./tests/remote"
+  }
+
   assert {
-    condition     = can(regex("^([a-f0-9]{8}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{12})$", data.azurerm_client_config.current.client_id))
-    error_message = "The client_id format does not match the format of a UUID."
+    condition     = module.example.hello_world == "Hello World!"
+    error_message = "Output hello_world not equal to expected value"
   }
 }

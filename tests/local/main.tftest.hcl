@@ -1,11 +1,10 @@
 mock_provider "azurerm" {}
 
-
-run "client_id_should_be_uuid" {
-  command = plan
+run "should_apply_without_error" {
+  command = apply
 
   assert {
-    condition     = length(data.azurerm_client_config.current.client_id) == 8
-    error_message = "The client_id (mocked value) format does not match the format of a UUID."
+    condition     = output.hello_world == "Hello World!"
+    error_message = "Output hello_world not equal to expected value"
   }
 }
