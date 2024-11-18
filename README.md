@@ -5,11 +5,11 @@
 
 ---
 
-# terraform-module-template
+# terraform-azurerm-helloworld
 
 [![SemVer](https://img.shields.io/badge/SemVer-2.0.0-blue.svg)](https://github.com/cloudeteer/terraform-module-template/releases)
 
-Terraform Module Template
+Terraform "Hello World!" Module
 
 <!-- BEGIN_TF_DOCS -->
 ## Usage
@@ -41,6 +41,10 @@ The following resources are used by this module:
 ## Outputs
 
 The following outputs are exported:
+
+### <a name="output_client_id"></a> [client\_id](#output\_client\_id)
+
+Description: n/a
 
 ### <a name="output_hello_world"></a> [hello\_world](#output\_hello\_world)
 

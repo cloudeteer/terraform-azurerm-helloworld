@@ -20,12 +20,6 @@ help: ## show this help.
 		else if (/^## .*$$/) {printf "  ${CYAN}%s${RESET}\n", substr($$1,4)} \
 		}' $(MAKEFILE_LIST)
 
-.PHONY: test-default
-test-default: ## Run tests on default
-	@echo "Running tests on default"
-	terraform init
-	terraform test
-
 .PHONY: test-examples
 test-examples: ## Run tests on examples
 	@echo "Running tests on examples"
@@ -45,11 +39,15 @@ test-remote: ## Run tests on remote
 	terraform test -test-directory=tests/remote
 
 .PHONY: test
-test: test-default test-examples test-local test-remote ## Run all tests
+test: test-examples test-local test-remote ## Run all tests
 
 .PHONY: docs
 docs: README.md ## Generate Terraform docs and update README.md
 
-README.md: $(wildcard *.tf) .terraform-docs.yaml
+ROOT_TF_FILES := $(wildcard *.tf)
+EXAMPLES_TF_FILES := $(shell find ./examples -name '*.tf')
+TF_FILES := $(ROOT_TF_FILES) $(EXAMPLES_TF_FILES)
+
+README.md: $(TF_FILES) .terraform-docs.yaml
 	@echo "Generating Terraform docs for README.md"
 	@terraform-docs  . --config .terraform-docs.yaml

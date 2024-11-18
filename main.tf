@@ -1,3 +1,2 @@
-# only added to verify azurerm provider is required
-# tflint-ignore: terraform_unused_declarations
+# added to verify azurerm provider is required
 data "azurerm_client_config" "current" {}
