@@ -1,12 +1,27 @@
 provider "azurerm" {
-  features {}
+  features {
+    resource_group {
+      prevent_deletion_if_contains_resources = false
+    }
+  }
 }
 
-run "client_id_should_be_uuid" {
+# The "setup" test:
+# - loads terraform.tf to set the required versions for following tests
+# - to prepare dependencies to be used in the remote module tests
+run "setup" {
+  command = apply
+
+  module {
+    source = "./tests/remote"
+  }
+}
+
+run "should_apply_without_error" {
   command = apply
 
   assert {
-    condition     = can(regex("^([a-f0-9]{8}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{12})$", data.azurerm_client_config.current.client_id))
-    error_message = "The client_id format does not match the format of a UUID."
+    condition     = output.hello_world == "Hello World!"
+    error_message = "Output hello_world not equal to expected value"
   }
 }
