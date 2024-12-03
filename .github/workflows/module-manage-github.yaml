@@ -10,3 +10,4 @@ on:
 jobs:
   module-manage-github:
     uses: cloudeteer/terraform-governance/.github/workflows/module-github-project.yaml@main
+    secrets: inherit
