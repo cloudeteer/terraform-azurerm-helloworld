@@ -1,11 +1,16 @@
 name: module-manage-github
 on:
+  push:
+    branches:
+      - main
   issues:
     types:
       - opened
   pull_request:
     types:
       - opened
+      - labeled
+      - unlabeled
 
 jobs:
   module-manage-github:
