@@ -44,11 +44,11 @@ The following outputs are exported:
 
 ### <a name="output_client_id"></a> [client\_id](#output\_client\_id)
 
-Description: n/a
+Description: The client ID of the Service Principal.
 
 ### <a name="output_hello_world"></a> [hello\_world](#output\_hello\_world)
 
-Description: n/a
+Description: A friendly greeting.
 <!-- END_TF_DOCS -->
 
 ## Contributions
