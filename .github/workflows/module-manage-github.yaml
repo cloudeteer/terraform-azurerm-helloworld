@@ -9,8 +9,11 @@ on:
   pull_request:
     types:
       - opened
+      - edited
       - labeled
       - unlabeled
+      - synchronize
+      - ready_for_review
 
 jobs:
   module-manage-github:
